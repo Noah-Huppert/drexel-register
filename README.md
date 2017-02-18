@@ -14,6 +14,9 @@ Here is the process:
             - Priority list per Instruction Type
 - Program gathers data
     - Course info
+        - Given in Configuration
+            - Academic Year
+            - Quarter
         - Located: On page of any section in course
             - Subject Code
             - Course No.
@@ -271,6 +274,38 @@ Action:
         - Backups
             - New CRN
             - Other changes
+            
+# Work system
+This system stores the state necessary to start any "work load" from any point. This system 
+ will be useful for:
+ - Ensuring urls are only scrapped once
+ - Making the program resumable from any point (Which also makes it failure tolerant)
+ - Configure certain workloads to be retryable
+ 
+ Here is how it is done:
+ - "Scraper Status" collection, columns:
+    - Scraper Name
+        - Course Catalog
+            - Meta: CId
+        - TMS Search
+            - Meta: Yr, Qrt, CTitle
+        - Course One Time
+            - Meta: Cid, CRN
+        - Section Details
+            - Meta: CRN
+    - Meta
+        - Holds specific information about what scraper was scraping. 
+        - Follows format based on Scraper Name.
+        - See Scraper Name bullet above for specific meta values stored based on Scraper Name.
+    - Status
+        - Queued
+            - Assumed to be for an update if Last Scraped is set
+            - If not set than assumed to be first time
+        - In Progress
+            - Same rules apply as Queued
+        - Complete
+    - Last Scraped
+- TODO WORK
 
 # `config.yaml`
 This is a configuration file for the program. 

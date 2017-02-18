@@ -1,0 +1,93 @@
+body {
+	background: none;
+}
+#wrapper {
+	width: auto;
+	margin: 0 auto;
+}
+#header {
+	height: auto;
+	position: relative;
+	overflow: hidden;
+}
+#header img {
+	max-width: 100%;
+}
+#navigation {
+	margin: 0;
+	padding: 5px;
+	height: auto;
+	width: auto;
+	background: #0a3365;
+}
+#navigation ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#navigation ul li {
+	display: block;
+}
+#navigation ul li span {
+	display: block;
+}
+#navigation a {
+	margin: 0;
+	padding: 0;
+	float: none;
+	background: none;
+	color: #b8c0cc;
+	text-decoration: none;
+}
+#navigation a:hover {
+	color: #fff;
+}
+#content_wrapper {
+	width: auto;
+	background: none;
+	position: static;
+}
+#content {
+	padding: 10px;
+}
+#content_left {
+	padding: 0;
+}
+#column_1 {
+	margin: 0;
+	width: auto;
+	float: none;
+}
+#column_2 {
+	width: auto;
+	margin: 0;
+	float: none;
+}
+#footer {
+	width: auto;
+	background: none;
+	height: auto;
+	color: #666;
+	margin: 0;
+}
+#footer .left {
+	float: none;
+	margin: 10px 0;
+	width: auto;
+}
+#footer .right {
+	float: none;
+	margin: 0;
+	width: auto;
+	text-align: left;
+}
+
+/*Home Page*/
+.index-left {
+	width: auto;
+	float: none;
+}
+.index-right {
+	width: auto;
+	float: none;
+}

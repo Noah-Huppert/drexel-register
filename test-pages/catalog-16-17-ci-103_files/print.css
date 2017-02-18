@@ -1,0 +1,52 @@
+body {
+	margin: 0;
+	padding: 15px;
+	color: #000;
+	font-size: 150%;
+	font-family: sans-serif;
+}
+#header {
+	margin-bottom: 20px;
+}
+#skip, #topnav, #navigation, #breadcrumb, #search, #sidebar, #column_2 {
+		display: none;
+}
+#footer {
+	font-size: .75em; 
+}
+
+/*General Typography*/
+h1 { font-size: 1.5em; margin: 0 0 12px 0;}
+h2 { font-size: 1.25em; margin: 0 0 10px 0;}
+h3 { font-size: 1.125em; margin: 0 0 8px 0;}
+h4 { font-size: 1em; margin: 0 0 6px 0;}
+h5 { font-size: .85em; margin: 0 0 5px 0; font-weight: bold;}
+h6 { font-size: .75em; margin: 0 0 5px 0; font-weight: bold;}
+p, dl { font-size: .75em; margin: 0 0 18px 0; }
+ul, ol { font-size: .75em; margin: 0 0 18px 25px; }
+ul li ul, ol li ol { font-size: 1em; }
+ol li ul, ul li ol { font-size: 1em; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ddd; margin: 10px 0; padding: 0;}
+sup { font-size: .7em; vertical-align: super; line-height: 1; }
+
+/*Blockquotes*/
+blockquote { color: #000; margin-bottom: 18px; border-left: 5px solid #eee; padding-left: 15px; font-style: italic;}
+blockquote p { line-height: 1.5;}
+blockquote cite { display: block; font-size: .75em; color: #000; }
+blockquote cite:before { content: "\2014 \0020"; }
+
+/*Tables*/
+table { font-size: .75em; border-collapse: separate; border-spacing: 0; margin-bottom: 18px; width:100%;}
+th { padding: 5px 4px; vertical-align: top; font-weight: bold; border-bottom: 2px solid #d7d7d7; text-align: left;}
+td { border-top: 1px solid #d7d7d7; padding: 5px 4px; vertical-align: top;}
+td img {vertical-align: top;}
+td p {margin: 0;}
+
+div.facitem, div.courses { font-size: .75em; margin: 0 0 18px 0; }
+p.courseblockdesc, p.courseblocktitle  { font-size: 1em;}
+
+
+/*Courseleaf Controls*/
+#pw_toolbar, #pw_toolbar_toggle, #pw_statusbar, #sb_publish_bubble_bottom, #warningwin, #loadingwin, .lfeditable, .lfjsbubble {
+		display: none;
+}

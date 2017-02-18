@@ -1,0 +1,542 @@
+html {
+	background: #fff;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font: 12px /15px Arial, Helvetica, sans-serif;
+	background: #fff url(../images/back.jpg) repeat-x;
+}
+body#content {
+	font: 12px /15px Arial, Helvetica, sans-serif !important;
+	background-image: none;
+}
+body#content .structuredcontent td, body#content .structuredcontent th {
+	font: 12px /15px Arial, Helvetica, sans-serif !important;
+}
+h1 {
+	font: 30px /30px Georgia, Times, serif;
+	padding: 0;
+	margin: 18px 0;
+}
+h2 {
+	font: 21px /21px Georgia, Times, serif;
+	margin: 6px 0 18px 0;
+	color: #2b568d;
+}
+h3 {
+	font: 15px /18px Georgia, Times, serif;
+	margin: 12px 0 6px 0;
+}
+#sidebar h4 {
+	font: 15px /18px Georgia, Times, serif;
+	margin: 12px 0 6px 0;
+}
+p {
+	margin: 0 0 15px 0;
+}
+a {
+	color: #428ed1;
+	text-decoration: none;
+	border: 0;
+}
+a:hover {
+	color: #2c6ba2;
+}
+img {
+	border: 0;
+	border-style: none;
+}
+ul {
+	margin: 0 0 9px 18px;
+	padding: 0;
+	list-style: none;
+}
+ol {
+	margin: 0 0 9px 18px;
+	padding: 0;
+}
+.clear {
+	clear: both;
+}
+.note {
+	font-size: 11px;
+	color: #888;
+}
+#header {
+	margin: 0;
+	padding: 0;
+	height: 134px;
+	overflow: hidden;
+	z-index: 0;
+}
+#header .wrap {
+	margin: 0 auto;
+	width: 1020px;
+}
+#wrapper {
+	margin: 0 auto;
+	width: 1020px;
+	position: relative;
+}
+
+/*Main Nav*/
+#navigation {
+	width: 978px;
+	height: 36px;
+	background: url(../images/back_nav.png) repeat-x;
+}
+#navigation ul {
+	list-style: none;
+	padding: 12px 0 0 3px;
+}
+#navigation ul li {
+	display: inline;
+	list-style-type: none;
+}
+#navigation ul li span {
+	display: none;
+}
+#navigation a {
+	margin: 0 18px 0 0;
+	padding: 14px 0 0 0;
+	overflow: hidden;
+	float: left;
+	height: 0px !important;
+	height /**/:14px; /* for IE5/Win */
+}
+#navigation a:hover {
+	background-position: 0 -14px;
+}
+li.nav1 a {
+	width: 171px;
+	background: url(../images/nav_collegesschools.png) no-repeat left top;
+}
+li.nav2 a {
+	width: 66px;
+	background: url(../images/nav_majors.png) no-repeat left top;
+}
+li.nav3 a {
+	width: 64px;
+	background: url(../images/nav_minors.png) no-repeat left top;
+}
+li.nav4 a {
+	width: 174px;
+	background: url(../images/nav_graduateprograms.png) no-repeat left top;
+}
+li.nav5 a {
+	width: 183px;
+	background: url(../images/nav_certificateprograms.png) no-repeat left top;
+}
+li.nav6 a {
+	width: 68px;
+	background: url(../images/nav_archive.png) no-repeat left top;
+}
+
+/*Content*/
+#content_wrapper {
+	width: 1020px;
+	background: url(../images/back_content2.png) no-repeat;
+}
+#content {
+	padding: 5px 21px 21px 21px;
+	text-align: left;
+}
+#content_left {
+	padding: 0 18px;
+}
+#content_right {
+	display: none;
+}
+#column_1 {
+	margin: 0 24px 0 9px;
+	width: 661px;
+	float: left;
+}
+#column_1 ul {
+	margin: 0 0 9px 24px;
+	padding: 0;
+	list-style: square;
+}
+#column_1 ol {
+	margin: 0 0 9px 24px;
+	padding: 0;
+}
+#column_2 {
+	width: 220px;
+	margin: 21px 0 0 28px;
+	float: left;
+}
+#column_2 .sidebarmain {
+	margin: 0 0 9px -5px;
+	padding: 0;
+}
+#column_2 .sidebarsub {
+	margin: 6px 0 0 21px;
+	list-style: square;
+}
+#footer {
+	width: 978px;
+	text-align: center;
+	background: url(../images/footer.png) top center no-repeat;
+	height: 72px;
+	color: #666;
+	margin: 30px 0 0 0;
+}
+#footer .left {
+	float: left;
+	margin: 51px 21px;
+	width: 422px;
+	text-align: left;
+}
+#footer .right {
+	float: right;
+	margin: 51px 21px;
+	width: 422px;
+	text-align: right;
+}
+.icon {
+	border: none;
+	margin: 0px 6px 12px 0;
+	float: left;
+	clear: left;
+}
+.float_left_shadow {
+	float: left;
+	margin: 0 12px 6px 0;
+	-moz-box-shadow: 0 0 5px #999;
+	-webkit-box-shadow: 0 0 5px #999;
+	box-shadow: 0 0 5px #999;
+}
+.float_right_shadow {
+	float: right;
+	margin: 0 0 6px 12px;
+	-moz-box-shadow: 0 0 5px #999;
+	-webkit-box-shadow: 0 0 5px #999;
+	box-shadow: 0 0 5px #999;
+}
+.float_left {
+	float: left;
+	margin: 0 12px 6px 0;
+}
+.float_right {
+	float: right;
+	margin: 0 0 6px 12px;
+}
+ul.links li {
+	margin: 6px;
+	line-height: 12px;
+	color: #666;
+}
+.intro {
+	font: italic 21px /27px Georgia, Times, serif;
+	color: #333;
+	margin: 0 0 30px 0;
+}
+.disclaimer {
+	font: 11px /13px Arial, Helvetica, sans-serif;
+	color: #888;
+}
+.incoming {
+	margin: -12px 0 -6px 0;
+}
+.course_list {
+	width: 450px;
+	table-layout: fixed;
+}
+.course_list tr.titleRow {
+	font-weight: bold;
+}
+.course_list tr td {
+	padding: 0;
+	margin: 0;
+}
+td.courseLink {
+	width: 100px;
+}
+td.courseName {
+	width: 325px;
+}
+td.tableCredit {
+	width: 25px;
+	text-align: right;
+}
+ul.alpha li {
+	list-style: none;
+	float: left;
+	font-weight: bold;
+	font-size: 15px;
+	margin: 0 0 12px 0;
+}
+ul.alpha li a {
+	padding: 0 6px;
+}
+ul.alpha:after {
+	content: "";
+	clear: both;
+}
+h3 {
+	clear: left;
+}
+.separator {
+	height: 1px;
+	width: 90%;
+	border-bottom: 1px dashed #ccc;
+	margin: 15px 0;
+}
+
+/*Courseleaf Formatting*/
+#content table {
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 2px;
+}
+#content table td {
+	padding: 1px;
+}
+#search-form {
+	padding: 0 0 10px 0;
+}
+#search-input {
+	padding: 3px;
+	border: 1px solid #ccc;
+}
+#search-submit {
+	color: #fff;
+	padding: 3px;
+	background: #042d61;
+	cursor: pointer;
+}
+p#breadcrumbs {
+	padding: 10px 0;
+}
+.sc_courselist th {
+	text-align: left;
+}
+.hourscol {
+	text-align: right;
+}
+.sc_footnotes .symcol {
+	width: 3%;
+}
+tr.odd td, tr.odd th {
+	background-color: #E7E3DF;
+}
+#fssearchresults hr {
+	border: none;
+	height: 1px;
+	background: #ccc;
+}
+.areaheader {
+	font-weight: bold;
+}
+
+/*Plangrids*/
+.sc_plangrid.standard td {
+	padding: 3px 0;
+	font-weight: bold;
+	color: #000084;
+	border-bottom: 1px solid #000;
+}
+.sc_plangrid.standard td.codecol {
+	font-weight: normal;
+	width: 100px;
+}
+.sc_plangrid.standard th.hourscol {
+	text-align: right;
+}
+.sc_plangrid.standard td a {
+	color: #0000ee;
+	text-decoration: underline;
+}
+.sc_plangrid.standard th {
+	padding: 3px 0;
+	font-weight: bold;
+	border-bottom: 1px solid #000;
+	text-align: left;
+}
+.sc_plangrid.standard .lastrow td {
+	font-style: italic;
+	border-bottom: none;
+	background: #ffde5a;
+}
+.style2 .codecol {
+	width: 60px;
+}
+.sc_plangrid.style2 td {
+	padding: 3px 0;
+	border-top: 1px solid #000;
+}
+.sc_plangrid.style2 th {
+	padding: 3px 0;
+	font-weight: normal;
+}
+.style2 td.hourscol {
+	width: 200px;
+	border-top: none;
+}
+.style2 .lastrow td {
+	border-top: none;
+}
+.style3 .codecol {
+	width: 60px;
+}
+.sc_plangrid.style3 td {
+	padding: 3px 0;
+	border-bottom: 1px solid #000;
+}
+.sc_plangrid.style3 th {
+	padding: 3px 0;
+	font-weight: bold;
+	border-bottom: 1px solid #000;
+}
+
+/*Faculty*/
+.facitem {
+	margin: 0 0 10px 0;
+}
+
+/* Tabs */
+#tabs ul {
+	margin: 6px 0 15px 21px;
+	list-style: square;
+}
+#tabs ul li a {
+	text-decoration: none;
+}
+#tabs ul li a:hover, #tabs ul li.active a {
+	text-decoration: none;
+}
+#tabs ul li.active a {
+	font-weight: bold;
+	color: #042d61;
+}
+
+/* College Navigation Floats */
+.colfloat{
+	width:50%;
+	float:left;
+	margin-bottom:25px;
+}
+.colfloat h2 {
+	margin-bottom:5px;
+}
+.qugcourses{
+	width:50%;
+	float:left;
+	margin-bottom:25px;
+}
+.qugcourses h2 {
+	margin-bottom:5px;
+}
+
+/*Home Page*/
+.index-left {
+	width: 420px;
+	float: left;
+}
+.index-right {
+	width: 230px;
+	float: right;
+	overflow: hidden;
+}
+p.btn-grad,
+p.btn-ugrad,
+p.btn-other {
+	margin: 0;
+}
+p.btn-grad a,
+p.btn-ugrad a,
+p.btn-other a {
+	width: 230px;
+	height: 62px;
+	display: block;
+}
+p.btn-grad a span,
+p.btn-ugrad a span,
+p.btn-other a span {
+	display: none;
+}
+p.btn-ugrad a {
+	background: url(../images/ugrad.jpg) no-repeat left top;
+}
+p.btn-grad a {
+	background: url(../images/grad.jpg) no-repeat left top;
+}
+p.btn-other a {
+	background: url(../images/other.png) no-repeat left top;
+}
+p.btn-grad a:hover,
+p.btn-ugrad a:hover,
+p.btn-other a:hover {
+	background-position: 0 -62px;
+}
+#content p.courseblockdesc {
+	margin: 0 0 5px 0;
+}
+#content p.courseblocktitle {
+	margin: 0 0 5px 0;
+}
+.cdspacing {
+	margin-right: 20px;
+}
+
+
+/*Google Search Results*/
+#content .gcs-pagination {
+    text-align: left;
+}
+#content .gcs-pagination a,
+#content .gcs-pagination .current {
+    padding: 5px 12px;
+    font-size: 0.75em;
+    color: #333;
+    text-decoration: none;
+    background-color: #f5f5f5;
+    background-image: none;
+    background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+    background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+    border: 1px solid #bbbbbb;
+    display: inline-block;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+#content .gcs-pagination .current {
+    color: #fff;
+    background-color: #999;
+    background-image: none;
+}
+
+/*Google Search Results*/
+#content .gcs-url {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    width: 100%;
+}
+#content .gcs-total  {
+    margin: 0 0 1em 0;
+    font-style: italic;
+}
+#content .gcs-result h3 {
+    margin: 0;
+}
+
+/*Clearfix*/
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.clearfix {display: inline-block;}
+
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */

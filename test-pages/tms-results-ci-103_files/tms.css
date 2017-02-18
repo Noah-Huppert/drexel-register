@@ -1,0 +1,636 @@
+body {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial,Verdana,Helvetica,sans-serif
+	background-color: #ffffff;
+	margin-top:1px;
+}
+
+	
+/*  Header Link Style  */
+a.header {
+	font-family:arial,verdana,sans-serif; 
+	font-size:10px; 
+	color:#0000cc; 
+	text-decoration:underline;
+}
+
+a.header:hover {
+	font-family:arial,verdana,sans-serif; 
+	font-size:10px; 
+	color:#ff8200; 
+	text-decoration:underline;
+}
+
+h1 {
+ 	letter-spacing: 0.5em;
+ 	color: #ffffff; 	
+ 	font-size: 25px;
+ 	margin-top: 0.2em;
+ 	margin-bottom: 0.2em; 	
+ 	font-weight: bold;
+ 	align: right;
+ 	padding-top:0;
+}
+
+h1.first:first-letter{
+	color:#ffcc00;
+}
+
+
+
+/*  Top Navigation Style  */
+#navi td {
+	 color:#636563;
+	 background: #ffcc00;
+	 width: auto;
+	 font-size:11px;
+	 font-weight:bold;
+	 border: 1px solid #ffffff;
+}
+
+#navi a, #navi strong {
+	 font-family:arial,verdana,sans-serif;
+	 font-weight:bold;
+	 font-size:11px;
+	 text-decoration: none;
+	 display: block;
+	 padding: 4px 0px;
+	 margin: 0px;
+	 z-index:1;
+}
+
+#navi strong {
+	 font-weight: bold;
+	 color:#ffffff;
+	 background: #333367;
+	 width:auto;
+}
+
+#navi a {
+	 color: #000084;
+	 background: #ffeb7b;
+	 width:auto;
+}
+
+#navi a:hover {
+	color:#636563;
+ 	background: #ffcc00;
+}
+
+/*  Breadcrumb Navigation Style */
+#breadcrumb  {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background: #6e90af url("../images/utility-bar-bg.jpg") repeat-y left top;
+	color: white;
+	padding-right: 26px;
+	overflow: auto;
+	zoom: 1;
+}
+#breadcrumb ul {
+	padding: 0px;
+	background: #6e90af url("../images/utility-bar-bg.jpg") repeat-y left top;
+	margin: 0px;
+	padding-left: 20px;
+	padding-bottom: 5px;
+	font-family: Verdana;
+	font-size: 10px;
+	color: white;
+	list-style-type: none;
+	overflow: auto;
+	zoom: 1;
+}
+#breadcrumb ul li {
+	display: block;
+	float: left;
+	white-space: nowrap;
+}
+#breadcrumb ul li a, #breadcrumb ul li span {
+	display: block;
+	float: left;
+	padding: 5px 5px 0px 10px;
+	color: white;
+	text-decoration: none;
+	font-size: 10px;
+	background: transparent url("../images/breadcrumb-separator.gif") no-repeat left 0.9em;
+}
+#breadcrumb ul li.first a 
+{
+    padding-left: 0px;
+}
+#breadcrumb ul li a:hover, #breadcrumb ul li a:focus {
+	color: #ffcc00 !important;
+}
+#breadcrumb ul li.first a {
+	background-image: none;
+}
+#breadcrumb ul li.last * {
+	color: #cbd6dd;
+}
+
+
+/*  Welcome Style */
+.welcome{
+	width:400px;
+	margin:5px 21px 0px 21px; 
+	padding: 10px; 
+	font-size:15px;
+	line-height: 27px;
+	color:#333333;
+	border-left:10px solid #547793;
+	border-right:1px solid #cccccc;
+	border-top:1px solid #cccccc;
+	border-bottom:1px solid #cccccc;}
+
+.welcome p:first-letter {font-size:35px;}
+.welcome img {margin-top:5px;margin-right:10px;}
+#homePenImage {float:left;}
+
+
+
+/*  How to Use Style */
+.howToUsePanel {
+	width:145px;
+	margin:10px; 
+	border: 1px solid #cccccc;
+ 	background-color:#ffffff;
+	text-align:left;
+	font-size:13px;
+	color:#333333;
+}
+
+.boxHeader {
+	font-size:12px;
+	color:#ffffff;
+	font-weight:bold;
+	line-height: 20px;
+	background: #547793;	
+	text-align:center;
+}
+
+.point {
+	font-size:14px;
+	line-height: 20px;
+	padding:5px,5px,5px,5px;
+	color:#333333;
+	margin:5px;}
+
+.point:first-letter {
+	color:#333333;
+	font-weight:bold;}
+	
+.courseDesc {
+	font-size:14px;
+	line-height: 20px;
+	padding:2px,5px,2px,5px;
+	color:#333333;
+	margin:0px,5px,0px,5px; 
+ }	
+	
+.subpoint {
+	font-size:13px;
+	line-height: 16px;
+	padding:2px 2px 2px 6px;
+	color:#333333;
+	margin:2px;}	
+
+.subpoint1 {
+	font-size:13px;
+	line-height: 13px;
+	padding:0px 2px 0px 20px;
+	color:#333333;
+	margin:2px;}	
+	
+.subpoint2 {
+	font-size:13px;
+	line-height: 13px;
+	padding:0px 2px 0px 35px;
+	color:#333333;
+	margin:0px;}	
+		
+	
+/*  Page Title Style */
+.title {
+  border-bottom: 1px solid #666;
+  font-family: 'Arial Black', Arial, sans-serif;
+  font-weight: normal;
+  padding-bottom: 4px;
+  color: #341A50;
+  line-height: 22px;
+  font-size: 18px;
+  padding-left:5;
+}
+
+.subTitle {
+	FONT: bold 13px Verdana, Arial, Helvetica, sans-serif; TEXT-TRANSFORM: none; COLOR: #003366; TEXT-DECORATION: none
+}
+
+.sectionText{
+   background-color: #ffffff;
+   color: #333333;
+   font-size: 10pt; 
+   font-weight: 500; 
+   font-family: Verdana, Arial, Helvetica, sans-serif;
+   line-height: 15px;
+   padding:8 20 2 10;
+   }
+   
+.sectionText:first-letter {
+	font-size:18px;
+	font-weight:bold;
+	}
+
+.sectionTextSm {
+	FONT: 11px Verdana, Arial, Helvetica, sans-serif; COLOR: #006633; TEXT-DECORATION: none
+}
+
+.sectionText2{
+   background-color: #ffffff;
+   color: #333333;
+   font-size: 9pt; 
+   font-weight: 600; 
+   font-family: Verdana, Arial, Helvetica, sans-serif;
+   line-height: 18px;
+   padding:10 20 10 20;
+   } 
+   
+.sectionText3{
+   background-color: #ffffff;
+   color: #333333;
+   font-size: 10pt; 
+   font-weight: 500; 
+   font-family: Verdana, Arial, Helvetica, sans-serif;
+   line-height: 15px;
+   padding:5 5 5 5;
+   }   
+   
+ /*  College/School Style */  
+.collegePanel {
+	width:600px;
+	border: 1px solid #cccccc;
+ 	background-color:#ffffff;
+	text-align:left;
+	float:none;
+	margin-left:20px;
+	margin-right:6px;
+	margin-bottom:6px;
+	margin-top:6px;
+}
+
+.collegeRow {
+	width:600px; 
+	margin:0px; 
+	border: 1px solid #cccccc;
+ 	background-color:#ffffff;
+	text-align:left;
+	table-layout:auto;
+}
+
+/*  Subject Style */  
+.subject {
+  	font-family: Arial, verdana, sans-serif;
+  	font-size: 14px;	
+  	line-height: 13px;
+	padding:3px 6px 3px 10px;;
+	color:#333333;
+	margin:0px 6px 0px 0px;}
+	
+.subject a	{
+  font-family:  Arial, verdana, sans-serif;
+  font-size: 14px;	
+  line-height: 13px;
+  color: #341A50;
+  text-decoration:none;
+}
+
+.subject a:hover {
+	color:#0066FF; 
+	text-decoration:underline;
+}	   
+
+/*  Table Style */  
+.tableHeader {
+	font-size:12px;
+	color:#ffffff;
+	font-weight:bold;
+	line-height: 20px;
+	background: #6A89AA;
+	text-align: right;
+}
+
+tr.odd {
+  text-align:left;
+  font-family: arial, verdana, sans-serif;
+  font-size: 12px;
+  color: #341A50;
+  background-color:#F5F5F5;
+  text-decoration:none;	
+}
+
+
+
+tr.even {
+  text-align:left;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  color: #341A50;
+  background-color:#ffffff;	
+  text-decoration:none;	
+}
+
+td.odd {
+  text-align:left;
+  font-family: arial, verdana, sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  color: #341A50;
+  background-color:#ffffff;
+  text-decoration:none;	
+}
+
+td.btn{
+  text-align:center;
+  font-family: arial, verdana, sans-serif;
+  font-size: 12px;
+  color: #341A50;
+  background-color:#ffffff;
+  text-decoration:none;	
+}
+
+
+
+td.even {
+  text-align:left;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  color: #341A50;
+  background-color:#F5F5F5;	
+  text-decoration:none;	
+}
+
+
+tr.odd a{
+  text-align:center;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #0066FF;
+  line-height: 14px;
+  font-size: 11px;	
+  text-decoration:underline;	
+}
+
+tr.odd a:hover {
+	color:#ff8200; 
+	text-decoration:underline;
+}
+
+
+tr.even a{
+  text-align:center;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #0066FF;
+  line-height: 14px;
+  font-size: 11px;	
+  text-decoration:underline;	
+}
+
+tr.even a:hover {
+	color:#ff8200; 
+	text-decoration:underline;
+}
+
+td	{
+	font-family:arial,verdana,sans-serif;
+	font-size:12px;
+	line-height: 12px;
+}
+
+/*  Course Details Style */ 
+td.tableHeader {
+	text-align:right;
+	font-size:12px;
+	color:#ffffff;
+	font-weight:bold;
+	line-height: 20px;
+	background: #6A89AA;
+	padding-right:10;
+}
+   
+  
+/*  Course Description Style */ 
+.descPanel {
+	width:385px;
+	margin:0px; 
+	border: 1px solid #cccccc;
+ 	background-color:#ffffff;
+	text-align:left; 	
+}
+
+.warning{
+   background-color: #ffffff;
+   color: #ce0000;
+   font-size: 9pt; 
+   font-weight: 600; 
+   font-family: Verdana, Arial, Helvetica, sans-serif;
+   padding:5 0 10 5;
+   }     
+
+/* Footer Style */
+.footer {
+	font-family:arial,verdana,sans-serif; 
+	font-size:10px; 
+	color:#ffffff; 
+	text-decoration:none;
+}
+
+td.footer {
+	font-family:arial,verdana,sans-serif; 
+	font-size:10px; 
+	color:#ffffff; 
+	text-decoration:none;
+} 
+
+a.footer {
+	font-family:arial,verdana,sans-serif; 
+	font-size:10px; 
+	color:#ffeb7b; 
+	text-decoration:underline;
+}
+
+a.footer:hover {
+	font-family:arial,verdana,sans-serif; 
+	font-size:10px; 
+	color:#FFFFFF; 
+	text-decoration:underline;
+}
+
+
+  
+#sideLeft{
+	float: left;
+	width:250px;
+	height:480px;
+	border-right:1px solid #888888;
+	background-color: #E6E9EF;
+	padding:0px 0px 0px 0px;
+	}
+	
+#sideLeft span {
+  display:block;
+  color:#000084;
+  font-size:13px; 
+  font-weight:bold;
+  text-decoration:none;
+  padding:8px 0px 8px 0px;
+  border-left:10px solid #1A3E54;
+  background-color:#E6E9EF;}		
+
+#sideLeft a:link, #sideLeft a:visited{
+  display:block;
+  color:#000084;
+  font-size:13px;
+  font-weight:bold;
+  text-decoration:none;
+  text-indent:10px;
+  padding:8px 0px 8px 0px;
+  border-left:8px solid #1A3E54;
+  background-color:#E6E9EF;}  
+
+/* The following rule prevents gaps appearing in between navigation items and divider images Netscape and Firefox */
+#sideLeft img {display:block;vertical-align:top;}
+#sideLeft a:hover {background-color:#6E90AF;color:#ffffff;}
+
+.coll{border-left:10px solid #ffeb7b;}
+.coll2{border-left:10px solid #669900;}
+
+
+#footer 
+{
+    position: relative;
+    background: transparent url("../images/footer-background.gif") repeat-x left top;
+    color: #333333;
+    padding: 6px 3px;
+    font-family: Arial, Helvetica, "san serif";
+    font-size: 11px;
+}
+
+#footer p 
+{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+td.update {
+	font-family:verdana,sans-serif; 
+	font-size:10px; 
+	color:#333333; 
+	text-decoration:none;
+} 
+
+ /*  Term Style */  
+.termPanel {
+	width:240px;
+	border: 1px solid #cccccc;
+ 	background-color:#ffffff;
+	text-align:left;
+	float:none;
+	margin-left:6px;
+	margin-right:6px;
+	margin-bottom:6px;
+	margin-top:6px;
+}
+
+.term {
+  	font-family: Arial, verdana, sans-serif;
+  	font-size: 14px;	
+  	line-height: 13px;
+	padding:3px 6px 3px 10px;;
+	color:#333333;
+	margin:0px 6px 0px 0px;}
+	
+.term a	{
+  font-family:  Arial, verdana, sans-serif;
+  font-size: 14px;	
+  line-height: 13px;
+  color: #341A50;
+  text-decoration:none;
+}
+
+.term a:hover {
+	color:#0066FF; 
+	text-decoration:underline;
+}	   
+
+div.odd {
+	float:left;
+	width:270px;
+	padding: 0px 0px 0px 0px;
+	margin:3px;
+	text-align:left;
+}  
+
+div.odd a {
+	  font-family:  Arial, verdana, sans-serif;
+	  font-size: 14px;	
+	  line-height: 12px;
+	  color: #341A50;
+	  text-decoration:none;
+}
+
+div.odd a:hover {
+	color:#0066FF; 
+	text-decoration:underline;
+}	 
+
+div.even {
+	float:right;
+	width:270px;
+	margin:3px;
+	text-align:left;	
+}
+
+div.even a {
+	  font-family:  Arial, verdana, sans-serif;
+	  font-size: 14px;	
+	  line-height: 12px;
+	  color: #341A50;
+	  text-decoration:none;
+}
+
+div.even a:hover {
+	color:#0066FF; 
+	text-decoration:underline;
+}	
+
+.searchPanel {
+	width:300px; 
+	border: 1px solid #cccccc;
+	padding: 5px 5px 5px 10px; 
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333333;
+ 	background-color:#ffffff;
+	text-align:left;
+	text-decoration:none;	
+	float:none;	
+	margin-left:2px;
+	margin-right:4px;
+	margin-bottom:6px;
+	margin-top:6px;	
+}
+
+.formLabel {
+	font-size:12px;
+	font-weight:bold;
+	line-height: 15px;
+	padding:5px;
+	color:#333333;
+	margin:5px;
+}
+
+.formField {
+	FONT: 11px Verdana, Arial, Helvetica, sans-serif; COLOR: #0066cc; TEXT-DECORATION: none
+}
+
+
+
