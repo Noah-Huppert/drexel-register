@@ -1,0 +1,28 @@
+year: 16-17
+quarter: spring
+courses:
+  - subject: CI
+    course: 103
+    types:
+      - lecture
+      - lab
+  - subject: CS
+    course: 172
+    types:
+      - lecture
+      - lab
+  - subject: ENGL
+    course: 103
+  - subject: MATH
+    course: 201
+  - subject: UNIV
+    course: CI101
+    crns:
+      - lecture:
+        - "!33154!"
+  - subject: PHYS
+    course: 103
+    types:
+      - lecture
+      - lab
+      - recitation

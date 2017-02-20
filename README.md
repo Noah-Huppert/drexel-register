@@ -1,4 +1,4 @@
-# Drexel Register
+ Drexel Register
 A helper program for Drexel course registration.
 
 Here is the process:
@@ -332,17 +332,17 @@ Configuration fields:
     - **Mandatory**
     - Identifies which courses to schedule
     - List of objects with follow fields:
-        - `subject_code`
+        - `subject`
             - **Mandatory**
             - 4 letter code
             - Identifies course subject
             - Ex., `PHYS` for Physics, `MATH` for Math
-        - `course_number`
+        - `course`
             - **Mandatory**
             - 3 number code
             - Identifies course in sequence
             - Ex., `101` or `102`
-        - `instruction_types`
+        - `types`
             - *Optional*
                 - Program will automatically create a list of Instruction Types for each Course 
                 - If the program's list doesn't match this list then an error will be thrown.
@@ -357,27 +357,27 @@ Configuration fields:
             - Ex.,
                 ```yaml
                 - ...
-                  instruction_types:
+                  types:
                     - lab
                     - lecture
                 ```
         - `crns`
             - *Optional*
             - Priority list of CRNs for each Instruction Type the Course requires
-                - If you must schedule a section with a specific CRN you can surround that CRN with exclamation marks.
+                - If you must schedule a section with a specific CRN you can surround that CRN with quotes and exclamation marks.
                 - Make sure you only put one CRN for that section if you do this (Otherwise the program will throw an error)
                 - This is useful when Drexel schedules you in a class that you can't change like COOP 101 or CS 103 Lab.
             - Ex., 
                 - You are automatically scheduled for a lab with CRN `1234567`.
                     - Additionally you **must** take this lab because you have to stay with your lab group from last term
-                    - To signify this we will surround the CRN with exclamation marks
+                    - To signify this we will surround the CRN with quotes and exclamation marks
                 - You would like to attend a lecture with your friend with CRN `7654321`.
                 - If that lecture isn't free another friend is attending a lecture with CRN `1010101`.
                 ```yaml
                 - ...
                   crns:
                     - lab
-                      - !1234567!
+                      - "!1234567!"
                     - lecture
                       - 7654321
                       - 1010101
@@ -411,27 +411,27 @@ Example `config.yaml`, configures program to schedule:
 - year: 16-17
 - quarter: spring
 - courses:
-    - subject_code: CS
-      course_number: 172
-      instruction_types:
+    - subject: CS
+      course: 172
+      types:
         - lab
         - lecture
-    - subject_code: CI
-      course_number: 103
-      instruction_types:
+    - subject: CI
+      course: 103
+      types:
         - lab
         - lecture
       crns:
         - lab
-          - !1234567!
-    - subject_code: MATH
-      course_number: 201
-    - subject_code: ENGL
-      course_number: 103
-    - subject_code: COOP
-      course_number: 101
-    - subject_code: UNIV
-      course_number: 102
+          - "!1234567!"
+    - subject: MATH
+      course: 201
+    - subject: ENGL
+      course: 103
+    - subject: COOP
+      course: 101
+    - subject: UNIV
+      course: 102
       crns:
         - lecture
           - 1010101
