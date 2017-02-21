@@ -23,7 +23,7 @@ with open(config_file_path, "r") as stream:
 config_ok = True
 
 # -- -- -- config.year
-cnfg_yr_pattern = re.compile("\d\d-\d\d")
+cnfg_yr_pattern = re.compile(r"\b\d\d-\d\d\b")
 if 'year' not in config:  # Check exists
     logging.error("config.year must be included")
     config_ok = False
@@ -32,7 +32,7 @@ elif cnfg_yr_pattern.match(config['year']) is None:  # Matches dd-dd
     config_ok = False
 
 # -- -- -- quarter
-cnf_qtr_pattern = re.compile("summer|fall|winter|spring")
+cnf_qtr_pattern = re.compile(r"\b(summer|fall|winter|spring)\b")
 if 'quarter' not in config:  # Check exists
     logging.error("config.quarter must be included")
     config_ok = False
@@ -41,8 +41,8 @@ elif cnf_qtr_pattern.match(config['quarter']) is None:  # Check matches one of t
     config_ok = False
 
 # -- -- -- courses
-cnf_typ_pattern = re.compile("lab|lecture|recitation")
-cnf_crn_pattern = re.compile("^!?\d{5}!?$")
+cnf_typ_pattern = re.compile(r"\b(lab|lecture|recitation)\b")
+cnf_crn_pattern = re.compile(r"^!?\d{5}!?$")
 if 'courses' not in config:  # Check exists
     logging.error("config.courses must be included")
     config_ok = False
@@ -61,7 +61,8 @@ else:  # Check courses list objects
         mandatory_keys = ['subject', 'course']
         for key in mandatory_keys:
             if key not in course:
-                logging.error("config.courses[{}] must include a {}".format(courseIndex, key))
+                logging.error("config.courses[{}] must include the {} key".format(courseIndex, key))
+                config_ok = False
 
         # Check 'types' key if present
         if 'types' in course:
@@ -103,10 +104,10 @@ else:  # Check courses list objects
 
         courseIndex += 1
 
-# Check that all checks passed
+# -- -- Check that all checks passed
 if config_ok == False:
     logging.error("Configuration is not ok, please fix errors above errors")
     sys.exit(-1)
 else:
     logging.info("Configuration file \"{}\" is OK".format(config_file_path))
-
+print(config)

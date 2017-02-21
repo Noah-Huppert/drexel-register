@@ -20,6 +20,10 @@ courses:
     crns:
       - lecture:
         - "!33154!"
+        - 12345
+      - lab:
+        - 12345
+        - 54321
   - subject: PHYS
     course: 103
     types:
