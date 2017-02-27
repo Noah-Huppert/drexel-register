@@ -1,12 +1,27 @@
-import logging, re
+import re, hashlib
 import yaml
 
 
 class Config:
+    """Wrapper class around config.yaml file
+    Fields:
+        year: Year to schedule in
+        quarter: Quarter to schedule in
+        courses: Courses to schedule
     """
-    Raises value error if year, quarter, or courses contains bad data
+
+    """Creates new Config instance
+    Raises:
+        ValueError: If year, quarter, or courses contains bad data
     """
     def __init__(self, year, quarter, courses):
+        # Make sure year and quarter values are strings
+        if year is not None and type(year) is not str:
+            year = str(year)
+
+        if quarter is not None and type(quarter) is not str:
+            quarter = str(quarter)
+
         # Verify configuration contains good data
         check_errs = []
 
@@ -43,13 +58,11 @@ class Config:
         self.quarter = quarter
         self.courses = courses
 
+    """Initialize Config class from file
+    Args:
+        path (str): Path of config file to load from, defaults to config.yaml
     """
-    Initialize Config class from file
-    """
-    def from_file(path):
-        if path is None:
-            path = "config.yaml"
-
+    def from_file(path="config.yaml"):
         config = {}
         with open(path, "r") as stream:
             try:
@@ -59,9 +72,14 @@ class Config:
 
         return Config(config['year'], config['quarter'], config['courses'])
 
-    # Static check methods
-    # All return True if they are valid
-    # All raise an ValueError if input is not valid
+    # Static check methods, following documentation docs apply to the functions /check_(.*)/
+    """Check a $1 field value
+    Args:
+        $1 ($1.type): $1.type to check
+
+    Raises:
+        ValueError: If $1 inputted is not valid
+    """
     def check_year(year):
         pattern = re.compile(r"\b\d\d-\d\d\b")
         if year is None:  # Check exists
@@ -116,7 +134,6 @@ class Config:
             else:  # Else return true
                 return True
 
-
     def check_course(course):
         if type(course) is not dict:  # Check is dict
             raise ValueError("course must be a dict")
@@ -142,6 +159,7 @@ class Config:
 
         # Check optional 'crns' key is list
         crn_pattern = re.compile(r"^(\d{5}|!\d{5}!)$")  # ddddd or !ddddd!
+        mandatory_crn_pattern = re.compile(r"^!\d{5}!$")
         if 'crns' in course and type(course['crns']) is not list:
             errors.append(ValueError("course['crns'] must be a list"))
         elif 'crns' in course:  # Check each 'crn' list item is valid
@@ -155,11 +173,22 @@ class Config:
                         errors.append(ValueError("course['crns'][{}] key must be one of: lab, lecture or recitation".format(crn_type)))
 
                     # Check crns in list
+                    mandatory_crn_found = False  # Keep track if we find a mandatory CRN in this category
                     crn_i = 0
                     for crn in crns:
                         crn = str(crn)
                         if crn_pattern.match(crn) is None:
                             errors.append(ValueError("course['crns']['{}'][{}] crn must be 5 digits and optionally surrounded by exclamation marks".format(crn_type, crn_i)))
+                        elif mandatory_crn_pattern.match(crn) is not None:
+                            if mandatory_crn_found == True:  # This is not the only mandatory crn in list, raise error
+                                errors.append(ValueError("course['crns']['{}'][{}] Only 1 CRN can be marked in a column at a time".format(crn_type, crn_i)))
+                            else:
+                                mandatory_crn_found = True
+
+                        # Check if mandatory CRN is present that crn is only item in list
+                        if mandatory_crn_found == True and crn_i != 0:
+                            errors.append(ValueError("course['crns']['{}'][{}] When mandatory CRN is present it must be the only CRN in its section".format(crn_type, crn_i)))
+
                         crn_i += 1
 
         # If any errors occured
@@ -178,5 +207,12 @@ class Config:
         else:  # Else return True
             return True
 
+    """Computes hash of configuration options
+    Returns:
+        str: SHA256 hash of config contents
+    """
+    def hash(self):
+        return hashlib.sha256(str(self).encode('UTF-8')).hexdigest()
+
     def __str__(self):
-        return "year: {}, quarter: {}\ncourses: {}".format(self.year, self.quarter, self.courses)
+        return "Config<year='{}', quarter='{}', courses='{}'>".format(self.year, self.quarter, self.courses)

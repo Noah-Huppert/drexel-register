@@ -1,0 +1,16 @@
+year: 16-17
+quarter: spring
+courses:
+    - subject: MATH
+      course: 201
+      types:
+        - lecture
+        - lab
+      crns:
+        - lecture:
+            - "!12345!"
+        - lab:
+            - 54321
+            - 21345
+    - subject: CS
+      course: 172

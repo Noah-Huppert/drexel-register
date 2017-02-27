@@ -106,6 +106,7 @@ It is here for those interested, I used this section to plan the program out so 
                         - Subject Code
                         - Course No.
                 - Instruction Type
+                - Instruction Method
                 - Section
                 - CRN
                 - Days
@@ -124,7 +125,6 @@ It is here for those interested, I used this section to plan the program out so 
     - Extract:
         - Credits
         - Campus
-        - Instruction Method
         - Max Enroll
         - Enroll
         - Section comments
